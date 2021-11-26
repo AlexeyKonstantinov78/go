@@ -1,0 +1,38 @@
+.reviews {
+    margin-bottom: 50px;
+}
+
+.reviews__title {    
+    font-style: normal;
+    margin-bottom: 40px;
+}
+
+.reviews__items {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.reviews__item {    
+    margin-bottom: 50px;
+}
+
+.review__figure {
+    display: inline-block;
+    width: 280px;
+}
+
+.review__img {
+    margin-bottom: 11px;
+}
+
+.reviews__sign {
+    text-align: center;
+}
+
+.reviews__subscription {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 52px;
+    padding-left: 20px;
+    width: 680px;    
+}

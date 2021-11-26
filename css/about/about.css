@@ -1,0 +1,73 @@
+.about {
+    margin-bottom: 50px;
+}
+
+.about__title {
+    margin-bottom: 46px;    
+}
+
+.about__description-blockquote {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about__img {
+    margin-right: 76px;
+}
+
+.about__description {
+    width: 500px;
+    white-space: pre-line;
+    margin-bottom: 48px;    
+}
+
+.about__blockquote {
+    width: 500px;
+}
+
+.blockquote {
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 44px;    
+    text-transform: uppercase;
+    margin: 8px 0 0 4px; 
+    
+}
+
+.blockquote__text {
+    line-height: 50px;
+    margin-bottom: 28px;
+
+}
+
+.about__before {
+    display: inline;
+    font-size: 44px;
+    font-weight: 900;       
+    color: #6C0287;
+    
+}
+
+.blockquote__text_style {
+    font-weight: 900;       
+    color: #6C0287;
+}
+
+.blockquote__sign {
+    display: inline-block;
+    vertical-align: top;
+    width: 389px;
+    font-style: normal;
+    text-transform: none;
+    margin-left: 79px;
+    padding-left: 111px;
+    background-image: url("./../about/image/arckady-abashkin.png");
+    background-size: contain;
+    background-repeat: no-repeat;  
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;  
+    white-space: pre-line;
+    /* letter-spacing: 0.03em;  */
+}

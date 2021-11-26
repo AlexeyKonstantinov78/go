@@ -1,0 +1,10 @@
+@import "normalize.css";
+@import "default.css";
+@import "basic.css";
+@import "./hero/hero.css";
+@import "./halls/halls.css";
+@import "./about/about.css";
+@import "./reviews/reviews.css";
+@import "./fag/fag.css";
+@import "./contacts/contacts.css";
+@import "./social/social.css";
