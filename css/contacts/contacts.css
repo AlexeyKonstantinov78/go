@@ -1,14 +1,18 @@
-.contacts {
-    padding-top: 50px;
-    padding-bottom: 41px;
+.contacts {  
+    padding-bottom: 0;      
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 151px;
 }
 
 .contacts__title {
+    width: 100%;
     margin-bottom: 48px;
 }
 
 .contacts__adress {
-    /* margin-bottom: 40px; */
+    margin-bottom: 35px;
     font-size: 24px;
     line-height: 28px;
     font-style: normal;

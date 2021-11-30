@@ -1,0 +1,157 @@
+.book {
+    background: #440F51;
+    margin-bottom: 100px;
+    padding: 80px 0;
+    
+}
+
+fieldset {
+    border: none;
+}
+
+.book__halls {
+    margin-bottom: 60px;
+}
+
+.book__title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.book__legend {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.book__label-radio {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 7px 15px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-right: 60px;
+}
+
+.book__label-radio:last-child {
+    margin-right: 0;
+}
+
+.book__input-radio {
+    display: none;
+}
+
+.book__select-game {
+    margin-bottom: 67px;
+}
+
+.book__items {
+    display: flex;   
+    justify-content: center;
+}
+
+.book__fieldset-flex-column {
+    flex-basis: 300px;
+    display: flex; 
+    flex-direction: column;    
+    margin: 0;
+}
+
+.book__fieldset-flex-column .book__legend {
+    text-align: left;
+}
+
+.book__label-select {
+    font-size: 22px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.book__label-select:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.book__select-tame {
+    margin-bottom: 40px;
+}
+
+.book__items_select-time {
+    gap: 50px; 
+}
+
+.book__select-item {
+    flex-basis: 300px;
+}
+
+.bool__data-time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book__naim {
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.book__input {
+    margin-top: 6px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #211E1E;
+    padding: 12px 20px;
+}
+
+.book__data-count {
+    padding-top: 16px;
+}
+
+.book__naim_count {
+    padding-top: 16px;
+}
+
+.book__input_data {
+    width: 134px;
+    padding: 12px 0 12px 20px;
+}
+.book__input_time {
+    width: 134px;
+    padding: 12px 0 12px 20px;
+}
+
+.book__btn {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #6C0287;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    padding: 16px 50px;
+    display: flex;
+    margin-left: auto;
+    margin-right: 89px;    
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    font-size: 0;
+} 
+
+input[type=time]::-webkit-calendar-picker-indicator {
+    font-size: 0;
+} 

@@ -1,0 +1,63 @@
+.wehave {
+    padding-top: 0;
+    margin-bottom: 50px;
+}
+
+.wehave__title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 41px;
+    white-space: pre-line;
+}
+
+.wehave__items {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    gap: 40px 20px;
+}
+
+.wehave__item {
+    position: relative;
+    width: 380px;
+    height: 228px;
+}
+
+.wehave__item:nth-child(1) {        
+    background-image: url("./image/VR.jpg");
+}
+
+.wehave__item:nth-child(2) {        
+    background-image: url("./image/sound-around.jpg");
+}
+
+.wehave__item:nth-child(3) {        
+    background-image: url("./image/karaoke.jpg");
+}
+
+.wehave__item:nth-child(4) {        
+    background-image: url("./image/game.jpg");
+}
+
+.wehave__item:nth-child(5) {        
+    background-image: url("./image/movie.jpg");
+}
+
+.wehave__item:nth-child(6) {        
+    background-image: url("./image/play-station5.jpg");
+}
+
+.wehave__name {
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    white-space: pre-line;
+    text-transform: none;
+    left: 40px;
+    top: 166px;
+}
