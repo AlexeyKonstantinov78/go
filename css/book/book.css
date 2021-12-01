@@ -71,6 +71,20 @@ fieldset {
     text-align: left;
 }
 
+.book__input-round {
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.book__input-square {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
 .book__label-select {
     font-size: 22px;
     line-height: 25px;
