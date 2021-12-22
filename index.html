@@ -12,23 +12,28 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./css/style.css">    
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d50fe589-2d7c-4e62-b6cf-87dca45613ed&lang=ru_RU" ></script>
+    <script src="./js/index.js" type="module"></script>    
 </head>
 <body>
     <header class="header container header__container">
-        <img class="header__logo" src="./css/header/image/logo.png" width="120" height="66" alt="Логотип">
+        <img class="header__logo" src="./css/header/image/logo.png" width="120" height="66" alt="Логотип GAME OVER" tabindex="0">           
         <nav class="header__navigation">
+            <button class="header__burger-menu btn burger__menu_open" aria-label="Menu"></button>
             <ul class="header__items">
-                <li class="header__item"><a href="#" class="headaer__link">залы</a></li>
-                <li class="header__item"><a href="#" class="headaer__link">О нас</a></li>
-                <li class="header__item"><a href="#" class="headaer__link">Бронь</a></li>
-                <li class="header__item"><a href="#" class="headaer__link">отзывы</a></li>
-                <li class="header__item"><a href="#" class="headaer__link">Контакты</a></li>
+                <li class="header__item"><a href="#zal" class="headaer__link">залы</a></li>
+                <li class="header__item"><a href="#onas" class="headaer__link">О нас</a></li>
+                <li class="header__item"><a href="#bron" class="headaer__link">Бронь</a></li>
+                <li class="header__item"><a href="#review" class="headaer__link">отзывы</a></li>
+                <li class="header__item"><a href="#contact" class="headaer__link">Контакты</a></li>
+                <li class="header__item header__btn_diplay-inline-320"><button class="header__btn" type="submit" >Заказать звонок</button></li>
             </ul>
         </nav>        
-        <button class="header__btn" type="submit">Заказать звонок</button>
+        <button class="header__btn header__btn_diplay-none-320" type="submit" >Заказать звонок</button>
     </header>    
-    <main class="main">
+    <main class="main" >
+        <h1 class="visually-hidden" tabindex="0">Сайт для проведения клаcсного отдыха в играх, кино или караоке</h1>                
         <section class="hero container">
             <div class="wrapper">
                 <h1 class="hero__title">GAME OVER</h1>
@@ -43,12 +48,21 @@
                         <p class="hero__content-add">Новейшая аппаратура</p>
                     </div>                
                 </div>
-                <button class="hero__btn" type="submit">Забронировать</button>
+                <button class="hero__down" aria-label="переход к следующему разделу">
+                    <a class="hero__link" href="#wehave">
+                        <svg class="hero__down-svg" width="97" height="97" viewBox="0 0 97 97" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="hero__down-circle" cx="48.5" cy="48.5" r="48" stroke="white"/>
+                            <rect class="hero__down-rect" x="34.4255" y="43.9162" width="1.82001" height="20.0201" transform="rotate(-44.9975 34.4255 43.9162)" fill="white"/>
+                            <rect class="hero__down-rect" x="48.5807" y="58.0737" width="1.82001" height="20.0201" transform="rotate(-134.997 48.5807 58.0737)" fill="white"/>
+                        </svg>
+                    </a>                    
+                </button>
+                <button class="hero__btn"><a class="hero__btn_link" href="#bron">Забронировать</a></button>  
             </div>                       
         </section>
         
-        <section class="wehave container">
-            <h2 class="wehave__title">У нас есть все для классного 
+        <section class="wehave container" tabindex="0">
+            <h2 class="wehave__title" id="wehave">У нас есть все для классного 
                 отдыха с друзьями!</h2>
 
             <ul class="wehave__items">
@@ -66,8 +80,7 @@
                     <h3 class="wehave__name">Настольные игры</h3>
                 </li>
                 <li class="wehave__item">
-                    <h3 class="wehave__name">Кино сервисы Netflix, IVI, 
-                        MegoGo, КиноПоиск, Okko</h3>
+                    <h3 class="wehave__name">Кино сервисы Netflix, IVI, MegoGo, КиноПоиск, Okko</h3>
                 </li>
                 <li class="wehave__item">
                     <h3 class="wehave__name">РlаyStаtiоn 5</h3>
@@ -75,9 +88,9 @@
             </ul>
         </section>
 
-        <article class="halls container">
-            <h2 id="zal" class="halls__title">Наши залы</h2>
-            <ol class="halls__items">
+        <article class="halls container" >
+            <h2 id="zal" class="halls__title" tabindex="0">Наши залы</h2>
+            <ol class="halls__items" tabindex="0">
                 <li class="halls__item"><h3 class="halls__name">80`s 
                     vibes</h3></li>
                 <li class="halls__item"><h3 class="halls__name">Star 
@@ -95,30 +108,38 @@
                     <fieldset>
                         <h2 class="book__title">Забранировать зал просто</h2>
         
-                        <fieldset class="book__halls">
-                            <legend class="book__legend">Выбери зал</legend>                        
-                                <label class="book__label-radio">
-                                    <input class="book__input-radio" type="radio" name="chooseHall" value="80`s vibes">80`s vibes
-                                </label>
-                                <label  class="book__label-radio">
-                                    <input class="book__input-radio" type="radio" name="chooseHall" value="Star wars">Star wars"
-                                </label>
-                                <label  class="book__label-radio">
-                                    <input class="book__input-radio" type="radio" name="chooseHall" value="Wild west">Wild west"
-                                </label>
-                                <label  class="book__label-radio">
-                                    <input class="book__input-radio" type="radio" name="chooseHall" value="Neon style">Neon style
-                                </label>                        
+                        <fieldset class="book__halls" id="radio">
+                            <legend class="book__legend book__legend_select">Выбери зал</legend>    
+                                <div class="bool__halls-block">                                    
+                                    <input class="book__input-radio visually-hidden" type="radio" name="chooseHall" id="chooseHall" value="80`s vibes">
+                                    <label class="book__label-radio" for="chooseHall">80`s vibes</label>
+                                </div>
+                                
+                                <div class="bool__halls-block">
+                                    <input class="book__input-radio visually-hidden" type="radio" name="chooseHall" id="star" value="Star wars">
+                                    <label  class="book__label-radio" for="star">Star wars</label>
+                                </div>
+
+                                <div class="bool__halls-block">
+                                    <input class="book__input-radio visually-hidden" type="radio" name="chooseHall" id="wild" value="Wild west">
+                                    <label  class="book__label-radio" for="wild">Wild west</label>
+                                </div>
+
+                                <div class="bool__halls-block"> 
+                                    <input class="book__input-radio visually-hidden" type="radio" name="chooseHall" id="neon" value="Neon style">
+                                    <label  class="book__label-radio " for="neon">Neon style</label> 
+                                </div>
+                                
                         </fieldset>
         
                         <fieldset class="book__select-game">
                             <legend class="book__legend">Собери набор развлечений</legend>
                                 
                             <div class="book__items">
-                                <fieldset class="book__fieldset-flex-column">
+                                <fieldset class="book__fieldset-flex-column" id="prefix">
                                         <legend class="book__legend">Приставка</legend>
                                         <label class="book__label-select">
-                                            <input class="book__input-round" type="radio" name="prefix" value="playStation5"> PlayStation5
+                                            <input class="book__input-round" type="radio"  name="prefix" value="playStation5"> PlayStation5                                            
                                         </label>
                                         <label class="book__label-select">
                                             <input class="book__input-round" type="radio" name="prefix" value="segaMegaDrive"> Sega Mega Drive
@@ -131,7 +152,7 @@
                                         </label>                                    
                                 </fieldset>
             
-                                <fieldset class="book__fieldset-flex-column">
+                                <fieldset class="book__fieldset-flex-column" id="boardGame">
                                     <legend class="book__legend">Настольная игра</legend>
                                     <label class="book__label-select">
                                         <input class="book__input-square" type="checkbox" name="boardGame" value="jenga"> Jenga
@@ -153,7 +174,7 @@
                                         <input class="book__input-square" type="checkbox" name="additionally" value="karaoke"> Караоке
                                     </label>
                                     <label class="book__label-select">
-                                        <input class="book__input-square" type="checkbox" name="additionally" value="vr"> VR(Очки виртуальной реальности)
+                                        <input class="book__input-square" type="checkbox" name="additionally" value="vr"> VR
                                     </label>
                                 </fieldset>
                             </div>                            
@@ -167,32 +188,32 @@
                                 <div class="book__data-count book__select-item">
                                     <div class="bool__data-time">
                                         <label class="book__naim book__naim_data"> 
-                                            <input class="book__input book__input_data" type="date" name="data" required >
+                                            <input class="book__input book__input_data" type="date" name="data" id="data" required >
                                         </label>
                                         <label class="book__naim book__naim_time">
-                                            <input class="book__input book__input_time" type="time" name="time" required >
+                                            <input class="book__input book__input_time" type="time" name="time" id="time" required >
                                         </label>
                                     </div>                                    
-                                    <label class="book__naim book__naim_count">
-                                        <input class="book__input" type="number" name="count" placeholder="Сколько человек" required>    
+                                    <label class="book__naim book__naim_count ">
+                                        <input class="book__input book__input_activ" type="number" name="count" id="count" placeholder="Сколько человек" required>    
                                     </label>
                                 </div>
 
                                 <div class="book__naim book__select-item">
                                     <label class="book__naim">Имя
-                                        <input class="book__input" type="text" name="name" required>
+                                        <input class="book__input book__input_activ" type="text" name="name" id="name" required>
                                     </label>
-                                    <label class="book__naim">Фамилия
-                                        <input class="book__input" type="text" name="surname" required>
+                                    <label class="book__naim ">Фамилия
+                                        <input class="book__input book__input_activ" type="text" name="surname" id="surname" required>
                                     </label>
                                 </div>
 
                                 <div class="book_contacts book__select-item">
                                     <label class="book__naim">Телефона
-                                        <input class="book__input" type="tel" name="phone" required>
+                                        <input class="book__input book__input_phone book__input_activ" type="tel" name="phone" id="phone" required>
                                     </label>
                                     <label class="book__naim">E-mail
-                                        <input class="book__input" type="email" name="phone" required>
+                                        <input class="book__input book__input_activ" type="email" name="email" id="email" required>
                                     </label>
                                 </div>
                             </div>
@@ -207,10 +228,11 @@
             
         </section>        
         
-        <article class="about container">
+        <article class="about container" >
             <h2 id="onas" class="about__title">О нас</h2>
             <div class="about__content">
-                <img class="about__img" width="600" height="596" src="./css/about/image/photos.jpg" alt="фото о нас"><div class="about__description-blockquote">
+                <img class="about__img" src="./css/about/image/photos.jpg" alt="фото о нас">
+                <div class="about__description-blockquote">
                     <p class="about__description">Для наших гостей мы создали концептуально новое 
                         игровое пространство виртуальной реальности 
                         в центральной части города. 
@@ -227,29 +249,30 @@
                                 создатель игровой 
                                 территории GAME OVER</cite> 
                         </blockquote>                       
-                    </div>                        
+                    </div>                 
+                    
                 </div>                    
             </div>                
         </article>
 
-        <section class="reviews container">
-            <h2 class="reviews__title">Отзывы посетителей</h2>
-            <ul class="reviews__items">
-                <li class="reviews__item">
+        <section class="reviews container swiper" >
+            <h2 id="review" class="reviews__title">Отзывы посетителей</h2>
+            <ul class="reviews__items swiper-wrapper">
+                <li class="reviews__item swiper-slide">
                     <figure class="review__figure">
                         <img class="review__img" src="./css/reviews/image/maks-samoylov.png" height="280" alt="Фото Макса Самойлова">
                         <figcaption class="reviews__sign">Макс Самойлов</figcaption>
                     </figure>
                     <p class="reviews__subscription">Отмечали здесь день рождения с компанией друзей, все было очень круто! VR очки это просто бомба, никогда еще я не был в таком полном игровом погружении. Сервис на высоте!</p>
                 </li>
-                <li class="reviews__item">
+                <li class="reviews__item swiper-slide">
                     <figure class="review__figure">
                         <img class="review__img" src="./css/reviews/image/oksana-grigogeva.png" height="280" alt="Фото Оксаны Григорьевой">
                         <figcaption class="reviews__sign">Оксана Григорьева</figcaption>
                     </figure>
                     <p class="reviews__subscription">Были в комнате Дикий Запад, пели в караоке под Шакиру, отличный получился корпоратив! У нас в городе больше нет подобных заведений</p>
                 </li>
-                <li class="reviews__item">
+                <li class="reviews__item swiper-slide">
                     <figure class="review__figure">
                         <img class="review__img" src="./css/reviews/image/nikita-yashenko.png" height="280" alt="Фото Никиты Ященко">
                         <figcaption class="reviews__sign">Никита Ященко</figcaption>
@@ -259,35 +282,127 @@
             </ul>
         </section>
 
-        <section class="fag container">
-            <h2 class="fag__title">Частые вопросы</h2>
-            <ul class="fag__items">
-                <li class="fag__item">Можно ли забронироватькомнату онлайн?</li>
-                <li class="fag__item">Могут ли мне вернуть деньги за бронь?</li>
-                <li class="fag__item">Какая комната самая поплуярная?</li>
-                <li class="fag__item">Как получить Vip карту?</li>
-                <li class="fag__item">Какая комната самая поплулярная?</li>
-            </ul>
+        <section class="fag container" >
+            <h2 class="fag__title" tabindex="0">Частые вопросы</h2>
+            <ul class="fag__items fag__accordion">                  
+                <li class="fag__item fag__item_acc">
+                    <h3 class="fag__btn fag__h3_acc"><span class="fag__acc_title">Можно ли забронироватькомнату онлайн?</span>
+                        <svg class="fag__svg" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="fag__circle" cx="23.0001" cy="23" r="22" stroke="#440F51" stroke-width="2"/>
+                            <path class="fag__path fag__path_activ" d="M22.8306 14H23.5086V34H22.8306V14Z" fill="#440F51"/>
+                            <path class="fag__path" d="M13.0001 24.1695V23.4915H33.0001V24.1695H13.0001Z" fill="#440F51"/>                            
+                        </svg>
+                    </h3>
+                    <p class="fag__text_acc" sty>Да, забронировать комнату вы можете онлайн, заполнив форму на нашем сайте. Также вы можете забронировать комнату позвонив по телефону 8 (999) 958 - 48 - 38</p>
+                </li>
+                <li class="fag__item fag__item_acc" >                    
+                    <h3 class="fag__btn fag__h3_acc"><span class="fag__acc_title">Могут ли мне вернуть деньги за бронь?</span>
+                        <svg class="fag__svg" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="fag__circle" cx="23.0001" cy="23" r="22" stroke="white" stroke-width="2"/>
+                            <path class="fag__path fag__path_activ" d="M22.8306 14H23.5086V34H22.8306V14Z" fill="white"/>
+                            <path class="fag__path" d="M13.0001 24.1695V23.4915H33.0001V24.1695H13.0001Z" fill="white"/>
+                        </svg>
+                    </h3>
+                    <p class="fag__text_acc" sty>Да, забронировать комнату вы можете онлайн, заполнив форму на нашем сайте. Также вы можете забронировать комнату позвонив по телефону 8 (999) 958 - 48 - 38</p>
+                </li>
+                <li class="fag__item fag__item_acc" >
+                    <h3 class="fag__btn fag__h3_acc" >
+                        <span class="fag__acc_title">Какая комната самая поплуярная?</span>
+                        <svg class="fag__svg" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="fag__circle" cx="23.0001" cy="23" r="22" stroke="#440F51" stroke-width="2"/>
+                            <path class="fag__path fag__path_activ" d="M22.8306 14H23.5086V34H22.8306V14Z" fill="#440F51"/>
+                            <path class="fag__path" d="M13.0001 24.1695V23.4915H33.0001V24.1695H13.0001Z" fill="#440F51"/>
+                        </svg>
+                    </h3>
+                    <p class="fag__text_acc" sty>Да, забронировать комнату вы можете онлайн, заполнив форму на нашем сайте. Также вы можете забронировать комнату позвонив по телефону 8 (999) 958 - 48 - 38</p>
+                </li>
+                <li class="fag__item fag__item_acc" >
+                    <h3 class="fag__btn fag__h3_acc" >
+                        <span class="fag__acc_title">Как получить Vip карту?</span>
+                        <svg class="fag__svg" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="fag__circle" cx="23.0001" cy="23" r="22" stroke="white" stroke-width="2"/>
+                            <path class="fag__path fag__path_activ" d="M22.8306 14H23.5086V34H22.8306V14Z" fill="white"/>
+                            <path class="fag__path" d="M13.0001 24.1695V23.4915H33.0001V24.1695H13.0001Z" fill="white"/>
+                        </svg>
+                    </h3>
+                    <p class="fag__text_acc" sty>Да, забронировать комнату вы можете онлайн, заполнив форму на нашем сайте. Также вы можете забронировать комнату позвонив по телефону 8 (999) 958 - 48 - 38</p>
+                </li>
+                <li class="fag__item fag__item_acc" >
+                    <h3 class="fag__btn fag__h3_acc" >
+                        <span class="fag__acc_title">Какая комната самая поплулярная?</span>
+                        <svg class="fag__svg" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="fag__circle" cx="23.0001" cy="23" r="22" stroke="#440F51" stroke-width="2"/>
+                            <path class="fag__path fag__path_activ" d="M22.8306 14H23.5086V34H22.8306V14Z" fill="#440F51"/>
+                            <path class="fag__path" d="M13.0001 24.1695V23.4915H33.0001V24.1695H13.0001Z" fill="#440F51"/>
+                        </svg>
+                    </h3>
+                    <p class="fag__text_acc" sty>Да, забронировать комнату вы можете онлайн, заполнив форму на нашем сайте. Также вы можете забронировать комнату позвонив по телефону 8 (999) 958 - 48 - 38</p>
+                </li>
+            </ul>           
         </section>
 
     </main>
     
-    <footer class="footer">
+    <footer class="footer" >
         <div class="container">
             <section class="contacts">
-                <h2 id="contact" class="contacts__title">Контакты</h2>
+                <h2 id="contact" class="contacts__title" tabindex="0">Контакты</h2>
                 <div class="contacts__content">                    
-                    <address class="contacts__adress address">                    
-                        <p class="address__name">г. Москва 
+                    <address class="contacts__adress address" >                    
+                        <p class="address__name" tabindex="0">г. Москва 
                             ул. Аквамарина, 16</p>
-                        <a class="address__phone address__link" href="tel:89509302893">8 (950) 930 - 28 - 93</a>
-                        <a class="address__email address__link" href="mailto:GameOver@gmail.com">GameOver@gmail.com</a>
+                        <a class="address__phone address__link" href="tel:89509302893" aria-label="телефон 8 (950) 930 - 28 - 93" >8 (950) 930 - 28 - 93</a>
+                        <a class="address__email address__link" href="mailto:GameOver@gmail.com" aria-label="электронная почта GameOver@gmail.com">GameOver@gmail.com</a>
                     </address>
                     <div class="social">
-                        <ul class="social__items"><li class="social__item"><a class="social__instagram" href="#" title="Instagram"></a></li><li class="social__item"><a class="social__vk" href="#" title="Vkontakt"></a></li><li class="social__item"><a class="social__facebook" href="#" title="Facebook"></a></li><li class="social__item"><a class="social__telegram" href="#" title="Telegram"></a></li></ul>
+                        <ul class="social__items">
+                            <li class="social__item">
+                                <a class="social__net social__focus social__active" href="#" title="соцсеть Instagram">
+                                    <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32.5001 24.9998C32.5001 26.9889 31.71 28.8965 30.3034 30.3031C28.8969 31.7096 26.9892 32.4998 25.0001 32.4998C23.011 32.4998 21.1033 31.7096 19.6968 30.3031C18.2903 28.8965 17.5001 26.9889 17.5001 24.9998C17.5001 24.5723 17.5451 24.1548 17.6226 23.7498H15.0001V33.7423C15.0001 34.4373 15.5626 34.9998 16.2576 34.9998H33.7451C34.0782 34.9991 34.3974 34.8663 34.6327 34.6306C34.868 34.3948 35.0001 34.0753 35.0001 33.7423V23.7498H32.3776C32.4551 24.1548 32.5001 24.5723 32.5001 24.9998ZM25.0001 29.9998C25.6569 29.9996 26.3072 29.8701 26.9139 29.6186C27.5206 29.3671 28.0719 28.9986 28.5362 28.534C29.0005 28.0695 29.3687 27.5181 29.6199 26.9112C29.8711 26.3044 30.0003 25.654 30.0001 24.9973C30 24.3405 29.8704 23.6902 29.6189 23.0835C29.3675 22.4767 28.9989 21.9255 28.5344 21.4612C28.0699 20.9969 27.5185 20.6287 26.9116 20.3775C26.3048 20.1263 25.6544 19.9971 24.9976 19.9973C23.6712 19.9976 22.3993 20.5248 21.4616 21.463C20.5239 22.4011 19.9973 23.6733 19.9976 24.9998C19.998 26.3262 20.5252 27.5981 21.4633 28.5358C22.4015 29.4735 23.6737 30.0001 25.0001 29.9998ZM31.0001 19.7498H33.9976C34.1968 19.7498 34.3878 19.6708 34.5288 19.5302C34.6699 19.3897 34.7495 19.1989 34.7501 18.9998V16.0023C34.7501 15.8027 34.6708 15.6113 34.5297 15.4702C34.3886 15.329 34.1972 15.2498 33.9976 15.2498H31.0001C30.8005 15.2498 30.6091 15.329 30.468 15.4702C30.3269 15.6113 30.2476 15.8027 30.2476 16.0023V18.9998C30.2501 19.4123 30.5876 19.7498 31.0001 19.7498ZM25.0001 0.999756C18.6349 0.999756 12.5304 3.52832 8.02956 8.02919C3.52869 12.5301 1.00012 18.6346 1.00012 24.9998C1.00012 31.365 3.52869 37.4694 8.02956 41.9703C12.5304 46.4712 18.6349 48.9998 25.0001 48.9998C28.1518 48.9998 31.2727 48.379 34.1845 47.1729C37.0963 45.9667 39.7421 44.1989 41.9707 41.9703C44.1993 39.7417 45.9671 37.096 47.1732 34.1842C48.3793 31.2723 49.0001 28.1515 49.0001 24.9998C49.0001 21.848 48.3793 18.7272 47.1732 15.8154C45.9671 12.9035 44.1993 10.2578 41.9707 8.02919C39.7421 5.80059 37.0963 4.03276 34.1845 2.82665C31.2727 1.62053 28.1518 0.999756 25.0001 0.999756ZM37.5001 34.7223C37.5001 36.2498 36.2501 37.4998 34.7226 37.4998H15.2776C13.7501 37.4998 12.5001 36.2498 12.5001 34.7223V15.2773C12.5001 13.7498 13.7501 12.4998 15.2776 12.4998H34.7226C36.2501 12.4998 37.5001 13.7498 37.5001 15.2773V34.7223Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__net social__focus social__active" href="#" title="соцсеть Vkontakt">
+                                    <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.0001 1C11.7451 1 1.00012 11.745 1.00012 25C1.00012 38.255 11.7451 49 25.0001 49C38.2551 49 49.0001 38.255 49.0001 25C49.0001 11.745 38.2551 1 25.0001 1ZM34.2301 28.0775C34.2301 28.0775 36.3526 30.1725 36.8751 31.145C36.8901 31.165 36.8976 31.185 36.9026 31.195C37.1151 31.5525 37.1651 31.83 37.0601 32.0375C36.8851 32.3825 36.2851 32.5525 36.0801 32.5675H32.3301C32.0701 32.5675 31.5251 32.5 30.8651 32.045C30.3576 31.69 29.8576 31.1075 29.3701 30.54C28.6426 29.695 28.0126 28.965 27.3776 28.965C27.297 28.9649 27.2168 28.9775 27.1401 29.0025C26.6601 29.1575 26.0451 29.8425 26.0451 31.6675C26.0451 32.2375 25.5951 32.565 25.2776 32.565H23.5601C22.9751 32.565 19.9276 32.36 17.2276 29.5125C13.9226 26.025 10.9476 19.03 10.9226 18.965C10.7351 18.5125 11.1226 18.27 11.5451 18.27H15.3326C15.8376 18.27 16.0026 18.5775 16.1176 18.85C16.2526 19.1675 16.7476 20.43 17.5601 21.85C18.8776 24.165 19.6851 25.105 20.3326 25.105C20.454 25.1036 20.5733 25.0727 20.6801 25.015C21.5251 24.545 21.3676 21.5325 21.3301 20.9075C21.3301 20.79 21.3276 19.56 20.8951 18.97C20.5851 18.5425 20.0576 18.38 19.7376 18.32C19.8671 18.1413 20.0378 17.9964 20.2351 17.8975C20.8151 17.6075 21.8601 17.565 22.8976 17.565H23.4751C24.6001 17.58 24.8901 17.6525 25.2976 17.755C26.1226 17.9525 26.1401 18.485 26.0676 20.3075C26.0451 20.825 26.0226 21.41 26.0226 22.1C26.0226 22.25 26.0151 22.41 26.0151 22.58C25.9901 23.5075 25.9601 24.56 26.6151 24.9925C26.7006 25.0461 26.7993 25.0746 26.9001 25.075C27.1276 25.075 27.8126 25.075 29.6676 21.8925C30.2397 20.8681 30.7369 19.8037 31.1551 18.7075C31.1926 18.6425 31.3026 18.4425 31.4326 18.365C31.5286 18.3161 31.6349 18.2912 31.7426 18.2925H36.1951C36.6801 18.2925 37.0126 18.365 37.0751 18.5525C37.1851 18.85 37.0551 19.7575 35.0226 22.51L34.1151 23.7075C32.2726 26.1225 32.2726 26.245 34.2301 28.0775Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__net social__focus social__active" href="#" title="соцсеть Facebook">
+                                    <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_0_57)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00012207 25.1396C0.00012207 37.5687 9.02721 47.9042 20.8335 50V31.9437H14.5835V25H20.8335V19.4438C20.8335 13.1937 24.8605 9.72292 30.5564 9.72292C32.3605 9.72292 34.3064 10 36.1105 10.2771V16.6667H32.9168C29.8605 16.6667 29.1668 18.1937 29.1668 20.1396V25H35.8335L34.723 31.9437H29.1668V50C40.973 47.9042 50.0001 37.5708 50.0001 25.1396C50.0001 11.3125 38.7501 0 25.0001 0C11.2501 0 0.00012207 11.3125 0.00012207 25.1396Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_0_57">
+                                        <rect width="50" height="50" fill="white" transform="translate(0.00012207)"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__net social__focus social__active" href="#" title="соцсеть Telegram">
+                                    <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_0_60)">
+                                        <path d="M50.0001 25C50.0001 31.6304 47.3662 37.9893 42.6778 42.6777C37.9894 47.3661 31.6305 50 25.0001 50C18.3697 50 12.0109 47.3661 7.32245 42.6777C2.63404 37.9893 0.00012207 31.6304 0.00012207 25C0.00012207 18.3696 2.63404 12.0107 7.32245 7.32233C12.0109 2.63392 18.3697 0 25.0001 0C31.6305 0 37.9894 2.63392 42.6778 7.32233C47.3662 12.0107 50.0001 18.3696 50.0001 25ZM25.897 18.4563C23.4657 19.4688 18.6032 21.5625 11.3157 24.7375C10.1345 25.2062 9.51262 25.6687 9.45637 26.1187C9.36262 26.8781 10.3157 27.1781 11.6126 27.5875L12.1595 27.7594C13.4345 28.175 15.1532 28.6594 16.0439 28.6781C16.8564 28.6969 17.7595 28.3656 18.7564 27.6781C25.5657 23.0813 29.0814 20.7594 29.3001 20.7094C29.4564 20.6719 29.6751 20.6281 29.8189 20.7594C29.9657 20.8875 29.9501 21.1344 29.9345 21.2C29.8407 21.6031 26.1001 25.0781 24.1657 26.8781C23.5626 27.4406 23.1345 27.8375 23.047 27.9281C22.8543 28.125 22.6585 28.3188 22.4595 28.5094C21.272 29.6531 20.3845 30.5094 22.5064 31.9094C23.5282 32.5844 24.347 33.1375 25.1626 33.6937C26.0501 34.3 26.9376 34.9031 28.0876 35.6594C28.3782 35.8469 28.6595 36.05 28.9314 36.2437C29.9657 36.9812 30.9001 37.6437 32.047 37.5375C32.7157 37.475 33.4064 36.85 33.7564 34.975C34.5845 30.5469 36.2126 20.9562 36.5876 17.0031C36.6105 16.6745 36.5969 16.3444 36.547 16.0187C36.5176 15.756 36.3904 15.5139 36.1907 15.3406C35.9064 15.1443 35.5674 15.0427 35.222 15.05C34.2845 15.0656 32.8376 15.5688 25.897 18.4563Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_0_60">
+                                        <rect width="50" height="50" fill="white" transform="translate(0.00012207)"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <img class="contacts__maps" src="./css/contacts/image/map.jpg" width="680" height="274" alt="карта">
+                <!-- <img class="contacts__maps" src="./css/contacts/image/map.jpg" width="680" height="274" alt="карта" tabindex="0"> -->
+                <div id="map" class="contacts__maps" ></div>
             </section>
             
             <address class="autor">
@@ -298,7 +413,21 @@
                 </div>
             </address>
         </div>  
-    </footer>   
+    </footer>
+    <section class="modal-section">
+        <form class="modal" id="modal-form">
+            <div class="modal__close"></div>
+            <h2 class="modal__title">Заказать звонок</h2>
+            <label class="modal__label">Имя
+                <input class="modal__input modal__input_name" type="text" name="name" id="namemodal" required >
+            </label>
+            <label class="modal__label">Телефон
+                <input class="modal__input modal__input_phone" type="tel" name="phone" id="phonemodal" required >
+            </label>
+            <button class="modal__btn book__btn">Позвонить мне</button>
+        </form>
+    </section> 
+    
     
 </body>
 </html>

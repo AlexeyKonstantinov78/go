@@ -1,42 +1,42 @@
 
-.halls {
-    padding-top: 50px;
+.halls {    
     margin-bottom: 100px;
 }
 
 .halls__title {
-    margin-bottom: 40px;            
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 40px;       
 }
 
 .halls__items {
-    width: 1180px;
-    min-height: 718px;
-    display: flow-root;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+    gap: 20px;
 }
 
 .halls__item {
-    width: 580px;
-    height: 349px;
-    margin-bottom: 20px;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center; 
+    flex-basis: calc((100% / 2) - 10px);    
+    aspect-ratio: 1.66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .halls__name {
     display: inline-block;
     white-space: pre-line;
-    line-height: 78px;
-    height: 100%;
-    padding-top: 107px;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 80px;    
+    text-transform: uppercase;
 }
 
 .halls__item:nth-last-child(-n+2) {    
     margin-bottom: 0;
-}
-
-.halls__item:nth-child(2n) { 
-    float: right;
 }
 
 .halls__item:nth-child(1) {
@@ -61,4 +61,58 @@
     background-image: url("./../halls/image/neon-style.jpg");
     background-repeat: no-repeat;
         background-size: cover;
+}
+
+@media (max-width: 1200px) {
+    .halls {    
+        margin-bottom: 70px;
+    }
+    .halls__title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 36px;       
+    }
+
+    .halls__name {
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+@media (max-width: 890px) {
+    .halls {    
+        margin-bottom: 62px;
+    }
+    .halls__title {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 35px;       
+    }
+    .halls__name {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .halls {    
+        margin-bottom: 30px;
+    }
+    .halls__title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 15px;       
+    }
+    .halls__name {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .halls__items {        
+        gap: 10px;
+    }
+    
+    .halls__item {
+        flex-basis: 100%;    
+        aspect-ratio: 1.66;       
+    }
 }

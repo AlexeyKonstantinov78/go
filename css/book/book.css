@@ -1,5 +1,5 @@
 .book {
-    background: #440F51;
+    background: var(--bg-color);var(--bg-btn);
     margin-bottom: 100px;
     padding: 80px 0;
     
@@ -10,7 +10,16 @@ fieldset {
 }
 
 .book__halls {
+    position: relative;
     margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.book__halls .just-validate-error-label {
+    position: absolute;
+    top: -30px;
+    left: 0;
 }
 
 .book__title {
@@ -29,8 +38,16 @@ fieldset {
     text-align: center;
     margin-bottom: 40px;
 }
+.bool__halls-block{
+    position: relative;
+    width: 250px;
+    height: 55px;
+}
 
 .book__label-radio {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
     font-weight: bold;
     font-size: 30px;
     line-height: 40px;
@@ -39,8 +56,9 @@ fieldset {
     color: #000000;
     padding: 7px 15px;
     background: #FFFFFF;
-    border-radius: 8px;
-    margin-right: 60px;
+    border-radius: 8px;   
+    cursor: pointer; 
+    border: 3px solid transparent;
 }
 
 .book__label-radio:last-child {
@@ -48,16 +66,32 @@ fieldset {
 }
 
 .book__input-radio {
-    display: none;
+    position: absolute;
 }
 
+.book__input-radio:hover ~ .book__label-radio{
+    border: 3px solid var(--bg-btn-click-color, #640AA3);
+    background: #EADEED;
+}
+
+.book__input-radio:focus ~.book__label-radio {    
+    border: 3px solid var(--bg-btn-click-color, #640AA3);        
+}
+
+.book__input-radio:active ~ .book__label-radio {
+    background: #EADEED;
+    border: 3px solid transparent;
+}
 .book__select-game {
     margin-bottom: 67px;
+    padding: 0 100px;
 }
 
 .book__items {
     display: flex;   
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px 0;
 }
 
 .book__fieldset-flex-column {
@@ -72,14 +106,15 @@ fieldset {
 }
 
 .book__input-round {
-    width: 27px;
-    height: 27px;
+    width: 22px;
+    height: 25px;
     display: inline-block;
     vertical-align: bottom;
+    
 }
 
 .book__input-square {
-    width: 25px;
+    width: 22px;
     height: 25px;
     display: inline-block;
     vertical-align: bottom;
@@ -97,17 +132,19 @@ fieldset {
 
 .book__select-tame {
     margin-bottom: 40px;
+    padding: 0 100px;
 }
 
 .book__items_select-time {
-    gap: 50px; 
+    gap: 48px; 
 }
 
 .book__select-item {
-    flex-basis: 300px;
+    flex-basis: 254px;
 }
 
 .bool__data-time {
+    width: 300px;
     display: flex;
     justify-content: space-between;
 }
@@ -128,6 +165,11 @@ fieldset {
     line-height: 28px;
     color: #211E1E;
     padding: 12px 20px;
+}
+
+.book__input-square:focus,
+.book__input-round:focus {
+    outline: 1px solid var(--border-btn, #CD06FF);
 }
 
 .book__data-count {
@@ -152,14 +194,33 @@ fieldset {
     font-size: 22px;
     line-height: 28px;
     text-transform: uppercase;
-    color: #6C0287;
+    color: var(--bg-btn-color, #6C0287);
     background: #FFFFFF;
     border-radius: 10px;
     border: none;
     padding: 16px 50px;
     display: flex;
     margin-left: auto;
-    margin-right: 89px;    
+    margin-right: 89px;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.25);
+    transition: background .5s, color .6s;    
+}
+
+.book__btn:hover,
+.book__btn:focus {
+    background: var(--bg-btn-hover-focus, #840AA3);
+    color: #FFFFFF;
+} 
+
+.book__btn:active {
+    background: var(--bg-btn-click-color, #640AA3);
+    color: #FFFFFF;
+}
+
+.book__input_activ:focus,
+.book__input_activ:active {
+    outline: 2px solid var(--border-btn, #CD06FF);
+    
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
@@ -169,3 +230,140 @@ input[type=date]::-webkit-calendar-picker-indicator {
 input[type=time]::-webkit-calendar-picker-indicator {
     font-size: 0;
 } 
+
+@media (max-width: 1200px) {
+    .book {
+        margin-bottom: 70px;
+    }
+    .book__title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }    
+    .book__legend {       
+        margin-bottom: 26px;
+    }
+    .bool__halls-block {        
+        width: 180px;
+        height: 44px;
+    }
+    .book__label-radio {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .book__select-game {
+        padding: 0;
+    }
+    .book__select-tame {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .book {
+        margin-bottom: 60px;
+    }
+    .book__halls {
+        margin-bottom: 50px;     
+    }
+    .book__title {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 40px;
+    }
+    .book__legend {       
+        margin-bottom: 30px;
+    } 
+    .bool__halls-block {        
+        width: 150px;
+        height: 38px;
+    }
+    .book__label-radio {
+        font-size: 16px;
+        line-height: 20px;
+    }   
+    .book__select-game {
+        margin-bottom: 50px;
+    }
+    .book__data-count {
+        flex-grow: 2;
+        width: 100%;        
+        display: flex;
+        justify-content: space-between;
+    }
+    .book__naim_count {
+        padding-top: 0;
+    }
+    .book__select-item {
+        flex-basis: 280px;
+    }
+    .bool__data-time {
+        width: 280px;     
+    }
+    .book__naim_count {
+        width: 280px;
+    }
+    .book__btn {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 670px) {
+    .book {
+        margin-bottom: 30px;
+    }
+    .book {
+        padding-top: 30px;
+    }
+    .book__title {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 13px;
+    }
+    .book__halls {
+        flex-wrap: wrap;
+        gap: 14px 20px;
+        margin-bottom: 30px;
+    }
+    .book__legend {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .book__legend_select{        
+        margin-bottom: 15px;
+    }
+    .book__label-select{ 
+        font-size: 16px;
+        line-height: 26px;
+
+    }
+    .bool__halls-block {
+        width: 130px;
+        height: 30px;
+    }
+    .book__label-radio {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 6px 18px;
+    }
+    .book__input-round {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+    
+    .book__input-square {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+    .book__data-count {
+        flex-direction: column;
+    }
+
+    .book__btn {
+        padding: 17px 59px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}

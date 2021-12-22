@@ -1,10 +1,12 @@
 .reviews {
-    padding-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .reviews__title {    
     font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
     margin-bottom: 40px;
 }
 
@@ -14,7 +16,9 @@
 }
 
 .reviews__item {    
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    display: flex;
+    align-items: center;
 }
 
 .review__figure {
@@ -31,9 +35,84 @@
 }
 
 .reviews__subscription {
-    display: inline-block;
-    vertical-align: top;
-    padding-top: 52px;
     padding-left: 20px;
     width: 680px;    
+}
+
+@media (max-width: 1200px) {
+    .reviews {
+        margin-bottom: 70px;
+    }    
+    .reviews__title {    
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 26px;
+    }
+    .reviews__items {
+        width: 751px;        
+    }
+    .review__figure {        
+        width: 224px;
+    }
+    .reviews__sign {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .reviews__subscription {
+        font-size: 18px;
+        line-height: 26px;
+        width: 515px; 
+    }
+}
+
+@media (max-width: 890px) {
+    .reviews {
+        margin-bottom: 60px;
+    }   
+    .reviews__title {    
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 31px;
+    }
+    .reviews__items {
+        width: 561px;        
+    }
+    .review__figure {        
+        width: 156px;
+    }
+    .reviews__sign {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .reviews__subscription {
+        font-size: 16px;
+        line-height: 22px;
+        width: 393px; 
+    }
+}
+
+@media (max-width: 640px) {
+    .reviews {
+        margin-bottom: 30px;
+    }   
+    .reviews__title {    
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 15px;
+    }
+    .reviews__items {
+        width: 100%;        
+    }
+
+    .reviews__item {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .reviews__subscription {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 16px;
+        width: 300px;         
+    }
 }

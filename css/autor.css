@@ -12,3 +12,19 @@
 .autor__adress {
     text-align: end;
 }
+
+@media (max-width: 480px) {
+    .autor {
+        display: block;   
+        font-size: 12px;
+        line-height: 16px;            
+    }
+
+    .autor__copy {
+        text-align: center;
+        margin-bottom: 19px;
+    }
+    .autor__adress {
+        text-align: center;
+    }
+}

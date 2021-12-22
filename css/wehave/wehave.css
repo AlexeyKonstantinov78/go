@@ -1,6 +1,6 @@
 .wehave {
-    padding-top: 0;
-    margin-bottom: 50px;
+    padding-bottom: 70px;
+    margin-bottom: 100px;
 }
 
 .wehave__title {
@@ -15,23 +15,29 @@
 
 .wehave__items {
     display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-    gap: 40px 20px;
+    flex-wrap: wrap;    
+    justify-content: space-between;    
+    gap: 40px 20px;    
 }
 
 .wehave__item {
-    position: relative;
+    position: relative;    
     width: 380px;
-    height: 228px;
+    height: 228px; 
+    transition: transform .5s;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wehave__item:hover {
+    transform: scale(1.1);
 }
 
 .wehave__item:nth-child(1) {        
-    background-image: url("./image/VR.jpg");
+    background-image: url("./image/VR.jpg");    
 }
 
-.wehave__item:nth-child(2) {        
+.wehave__item:nth-child(2) {
     background-image: url("./image/sound-around.jpg");
 }
 
@@ -51,6 +57,10 @@
     background-image: url("./image/play-station5.jpg");
 }
 
+.wehave__item:nth-child(3n+2) { 
+    top: 70px;
+}
+
 .wehave__name {
     position: absolute;
     font-weight: bold;
@@ -58,6 +68,93 @@
     line-height: 28px;
     white-space: pre-line;
     text-transform: none;
+    /* left: 40px; */
     left: 40px;
-    top: 166px;
+    top: 168px;
+}
+
+@media (max-width: 1210px) {
+    .wehave {     
+        margin-bottom: 70px;
+    }
+    .wehave__title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .wehave__items {
+        gap: 30px 21px;    
+    }
+
+    .wehave__item {        
+        width: 287px;
+        height: 172px; 
+        
+    }
+    
+    .wehave__name {
+        left: 20px;
+        top: 114px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .wehave {     
+        padding-bottom: 0;
+    }
+    .wehave__items {
+        justify-content: space-around;
+    }
+    
+    .wehave__item:nth-child(3n+2) { 
+        top: 0;        
+    }
+    .wehave__item {        
+        width: 334px;
+        height: 200px;         
+    }
+    
+    .wehave__name {
+        left: 30px;
+        top: 132px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 890px) {
+    .wehave {     
+        margin-bottom: 60px;
+    }
+    .wehave__title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .wehave__items {
+        gap: 20px 20px;    
+    }    
+}
+
+@media (max-width: 810px){
+    .wehave__title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+    .wehave {     
+        margin-bottom: 30px;
+    }
+    .wehave__items {
+        gap: 10px 10px; 
+    }
+    .wehave__item {        
+        width: 135px;
+        height: 75px; 
+    }
+    .wehave__name {
+        left: 10px;
+        top: 30px;
+        font-size: 10px;
+        line-height: 14px;
+        padding-right: 10px;
+    }    
 }

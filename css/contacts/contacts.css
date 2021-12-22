@@ -1,14 +1,15 @@
 .contacts {  
+    padding-top: 0;
     padding-bottom: 0;      
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 151px;
+    margin-bottom: 145px;
 }
 
 .contacts__title {
     width: 100%;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 
 .contacts__adress {
@@ -51,4 +52,102 @@
     padding-left: 57px;
     margin-left: 4px;
     letter-spacing: 0.03em;
+}
+.contacts__maps {
+    width: 680px;
+    height: 274px;
+}
+
+@media (max-width: 1200px) {
+    .contacts {  
+        padding-top: 12px;
+        margin-bottom: 92px;
+    }
+    .contacts__title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 26px;
+    }
+    .address__name,
+    .address__link {
+        font-size: 24px;
+        line-height: 28px;
+        background-size: 26px;
+    }
+        
+    .contacts__maps {
+        width: 542px;
+        height: 274px;
+    }   
+}
+
+@media (max-width: 890px) {
+    .contacts {  
+        padding-top: 10px;
+        margin-bottom: 92px;
+    }
+    .contacts__title {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 30px;
+    }
+
+    .contacts__content {
+        margin: 0 auto 30px;
+    }
+    .contacts__adress {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .address__name,
+    .address__link {
+        text-align: center;
+        display: inline-block;
+        font-size: 24px;
+        line-height: 28px;
+        background-size: 26px;
+        padding-left: 44px;
+    }
+    .contacts__maps {
+        width: 100%;
+        height: 337px;
+    }   
+}
+
+@media (max-width: 480px) {
+    .contacts {  
+        padding-top: 7px;
+        margin-bottom: 63px;
+    }
+    .contacts__title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+    .contacts__content {
+        margin-bottom: 35px;
+    }
+    .contacts__adress {
+        margin-bottom: 10px;     
+    }
+    .address__name,
+    .address__link {
+        font-size: 14px;
+        line-height: 18px;
+        background-size: 20px;
+        padding-left: 44px;
+    }
+
+    .address__name {
+        margin-bottom: 10px;
+    }
+    .address__phone {
+        margin-bottom: 10px;
+    }
+
+    .contacts__maps {
+        width: 100%;
+        height: 194px;
+    } 
 }

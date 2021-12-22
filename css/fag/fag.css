@@ -1,19 +1,20 @@
 .fag {
-    padding-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     padding-bottom: 0;
 }
 
 .fag__title {
-    margin-bottom: 46px;
+    font-weight: bold;
+    font-size: 40px;
     line-height: 50px;
+    margin-bottom: 40px;
 }
 
 .fag__item {
     background-color: #fff;
     color: #1C1A1A;
     height: 87px;
-    padding: 0 70px;
+    padding: 0 0;
     align-items: center;
     font-weight: 700;
     font-size: 24px;
@@ -24,26 +25,79 @@
     justify-content: space-between;
 }
 
-.fag__item:after {
-    content: "";
-    display: inline-block;
-    width: 46px;
+.fag__btn {
+    margin: 0;
+    padding: 0;
+    border: none;
     height: 46px;
-    background-image: url("./image/open-purple.svg");
-    background-size: cover;
-    
+    background: none;    
+}
+
+.fag__item:nth-child(2n-1):hover .fag__svg {
+    fill:  #6C0287;
+}
+
+.fag__item:nth-child(2n-1):hover .fag__path {
+    fill: white;
+}
+
+.fag__item:nth-child(2n-1):active .fag__path_activ {    
+    display: none;
 }
 
 .fag__item:nth-child(2n) {
-    background-color: #440F51;
-    color: #fff;    
+    background-color: var(--bg-color);
+    color: #fff;        
 }
 
-.fag__item:nth-child(2n):after {
-    content: "";
-    display: inline-block;
-    width: 46px;
-    height: 46px;
-    background-image: url("./image/open.svg");
-    background-size: cover;
+.fag__item:nth-child(2n):hover .fag__svg {
+    fill: white;
+}
+
+.fag__item:nth-child(2n):hover .fag__path {
+    fill: var(--bg-color);
+}
+
+.fag__item:nth-child(2n):active .fag__path_activ {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .fag {
+        margin-bottom: 70px;        
+    }
+    
+    .fag__title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 26px;
+    }
+}
+
+@media (max-width: 890px) {
+    .fag {
+        margin-bottom: 60px;        
+    }
+    
+    .fag__title {
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .fag {
+        margin-bottom: 23px;        
+    }
+    
+    .fag__title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+    .fag__svg {
+        width: 30px;
+        height: 30px;
+    }
 }

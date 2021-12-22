@@ -1,3 +1,4 @@
+@import "var.css";
 @import "normalize.css";
 @import "default.css";
 @import "basic.css";
@@ -7,8 +8,11 @@
 @import "./halls/halls.css";
 @import "./book/book.css";
 @import "./about/about.css";
+@import "./reviews/swiper-bundle.min.css";
 @import "./reviews/reviews.css";
 @import "./fag/fag.css";
+@import "./accordion/accordion.css";
 @import "./contacts/contacts.css";
 @import "./social/social.css";
 @import "autor.css";
+@import "./modal/modal.css";
