@@ -150,6 +150,11 @@
     border: none;
     transition: background .5s;
 }
+.hero__btn_link{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
 .hero__btn:hover, .hero__btn:focus {
     background: var(--bg-btn-hover-focus, #840AA3);    
