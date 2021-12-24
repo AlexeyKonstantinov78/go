@@ -240,15 +240,52 @@ input[type=date] {
 }
 
 input[type=time]::-webkit-calendar-picker-indicator {    
-    font-size: 0;
+    /* font-size: 0; */
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/sort-down.png");
 } 
 
 input[type=time] {
-    background-image: url("https://img.icons8.com/ios-filled/50/000000/sort-down.png");
+    /* background-image: url("https://img.icons8.com/ios-filled/50/000000/sort-down.png");
     background-repeat: no-repeat;
     background-size: 21px;
-    background-position: right;
+    background-position: right; */
 }
+
+.ui-widget-header {
+    background: none;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    background-image: url("./img/bi_arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    transform: rotate(180deg);
+    opacity: 1;    
+    background-position: center;
+}
+
+.ui-datepicker .ui-datepicker-next {
+    background-image: url("./img/bi_arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: 70%;    
+    opacity: 1;    
+    background-position: center;
+}
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, 
+.ui-button, 
+html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active { 
+    text-align: center;   
+    background: #fff;
+}
+
+.ui-state-active {    
+        background: var(--bg-btn-color) !important;    
+}
+
 
 @media (max-width: 1200px) {
     .book {

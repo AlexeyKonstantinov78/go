@@ -14,7 +14,8 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=d50fe589-2d7c-4e62-b6cf-87dca45613ed&lang=ru_RU" ></script>
-    <script src="./js/index.js" type="module"></script>    
+    <script src="./js/index.js" type="module"></script>
+    
 </head>
 <body>
     <header class="header container header__container">        
@@ -185,10 +186,10 @@
                                 <div class="book__data-count book__select-item">
                                     <div class="bool__data-time">
                                         <label class="book__naim book__naim_data"> 
-                                            <input class="book__input book__input_data" type="date" name="data" id="data" required >
+                                            <input class="book__input book__input_data" type="text" name="data" id="data" required placeholder="Дата" onfocus="this.type='date'" onblur="if(this.value==''){this.type='text'}">
                                         </label>
-                                        <label class="book__naim book__naim_time">
-                                            <input class="book__input book__input_time" type="time" name="time" id="time" required >
+                                        <label class="book__naim book__naim_time version-24h">
+                                            <input class="book__input book__input_time timepicker-ui-input" type="text" name="time" step="00:30" id="time" required placeholder="Время" onfocus="this.type='time'" onblur="if(this.value==''){this.type='text'}">
                                         </label>
                                     </div>                                    
                                     <label class="book__naim book__naim_count ">

@@ -11,6 +11,7 @@ import './../css/form/datepicker/datepicker-ru.js';
 import datepicker from './../css/form/datepicker/datepicker.js';
 import './../css/form/inputmask.min.js';
 import './../css/form/just-validate.production.min.js';
+import timejs from './../css/form/time/time.js';
 import form from './../css/form/form.js';
 
 burgers();
@@ -19,4 +20,5 @@ accordion();
 map();
 modal();
 datepicker();
+timejs();
 form();
