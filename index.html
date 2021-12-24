@@ -17,20 +17,20 @@
     <script src="./js/index.js" type="module"></script>    
 </head>
 <body>
-    <header class="header container header__container">
-        <img class="header__logo" src="./css/header/image/logo.png" width="120" height="66" alt="Логотип GAME OVER" tabindex="0">           
-        <nav class="header__navigation">
-            <button class="header__burger-menu btn burger__menu_open" aria-label="Menu"></button>
-            <ul class="header__items">
-                <li class="header__item"><a href="#zal" class="headaer__link">залы</a></li>
-                <li class="header__item"><a href="#onas" class="headaer__link">О нас</a></li>
-                <li class="header__item"><a href="#bron" class="headaer__link">Бронь</a></li>
-                <li class="header__item"><a href="#review" class="headaer__link">отзывы</a></li>
-                <li class="header__item"><a href="#contact" class="headaer__link">Контакты</a></li>
-                <li class="header__item header__btn_diplay-inline-320"><button class="header__btn" type="submit" >Заказать звонок</button></li>
-            </ul>
-        </nav>        
-        <button class="header__btn header__btn_diplay-none-320" type="submit" >Заказать звонок</button>
+    <header class="header container header__container">        
+            <img class="header__logo" src="./css/header/image/logo.png" width="120" height="66" alt="Логотип GAME OVER" tabindex="0">           
+            <nav class="header__navigation">
+                <button class="header__burger-menu btn burger__menu_open" aria-label="Menu"></button>
+                <ul class="header__items">
+                    <li class="header__item"><a href="#zal" class="headaer__link">залы</a></li>
+                    <li class="header__item"><a href="#onas" class="headaer__link">О нас</a></li>
+                    <li class="header__item"><a href="#bron" class="headaer__link">Бронь</a></li>
+                    <li class="header__item"><a href="#review" class="headaer__link">отзывы</a></li>
+                    <li class="header__item"><a href="#contact" class="headaer__link">Контакты</a></li>
+                    <li class="header__item header__btn_diplay-inline-320"><button class="header__btn" type="submit" >Заказать звонок</button></li>
+                </ul>
+            </nav>        
+            <button class="header__btn header__btn_diplay-none-320" type="submit" >Заказать звонок</button>
     </header>    
     <main class="main" >        
         <section class="hero container">
@@ -42,7 +42,7 @@
                         <p class="hero__content-title">4</p>
                         <p class="hero__content-add">Тематических зала</p>
                     </div>
-                    <div class="hero__content-halls">
+                    <div class="hero__content-halls hero__content-halls_add">
                         <p class="hero__content-title hero__content-title_new">new</p>
                         <p class="hero__content-add">Новейшая аппаратура</p>
                     </div>                
@@ -54,7 +54,7 @@
                         <rect class="hero__down-rect" x="48.5807" y="58.0737" width="1.82001" height="20.0201" transform="rotate(-134.997 48.5807 58.0737)" fill="white"/>
                     </svg>                    
                 </a>
-                <a class="hero__btn" href="#bron" aria-label="переход к разделу бронирования">Забронировать</a>                
+                <button class="hero__btn" onclick="window.location.href='#bron'" aria-label="переход к разделу бронирования">Забронировать</button>                
             </div>                       
         </section>
         
@@ -252,7 +252,7 @@
             </div>                
         </article>
 
-        <section class="reviews container swiper" >
+        <section class="reviews container swiper reviews__container" >
             <h2 id="review" class="reviews__title">Отзывы посетителей</h2>
             <ul class="reviews__items swiper-wrapper">
                 <li class="reviews__item swiper-slide">
@@ -293,7 +293,7 @@
                     <p class="fag__text_acc" >Да, забронировать комнату вы можете онлайн, заполнив форму на нашем сайте. Также вы можете забронировать комнату позвонив по телефону 8 (999) 958 - 48 - 38</p>
                 </li>
                 <li class="fag__item fag__item_acc" >                    
-                    <h3 class="fag__btn fag__h3_acc"><span class="fag__acc_title">Могут ли мне вернуть деньги за бронь?</span>
+                    <h3 class="fag__btn fag__h3_acc"><span class="fag__acc_title fag__acc_title-fff">Могут ли мне вернуть деньги за бронь?</span>
                         <svg class="fag__svg" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle class="fag__circle" cx="23.0001" cy="23" r="22" stroke="white" stroke-width="2"/>
                             <path class="fag__path fag__path_activ" d="M22.8306 14H23.5086V34H22.8306V14Z" fill="white"/>
@@ -315,7 +315,7 @@
                 </li>
                 <li class="fag__item fag__item_acc" >
                     <h3 class="fag__btn fag__h3_acc" >
-                        <span class="fag__acc_title">Как получить Vip карту?</span>
+                        <span class="fag__acc_title fag__acc_title-fff">Как получить Vip карту?</span>
                         <svg class="fag__svg" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle class="fag__circle" cx="23.0001" cy="23" r="22" stroke="white" stroke-width="2"/>
                             <path class="fag__path fag__path_activ" d="M22.8306 14H23.5086V34H22.8306V14Z" fill="white"/>
@@ -341,7 +341,7 @@
     </main>
     
     <footer class="footer" >
-        <div class="container">
+        <div class="container footer__container">
             <section class="contacts">
                 <h2 id="contact" class="contacts__title" tabindex="0">Контакты</h2>
                 <div class="contacts__content">                    
@@ -406,7 +406,7 @@
                 <p class="autor__copy">&#169; Game Over, <data value="2021">2021</data></p>
                 <div class="autor__adress">
                     <p class="autor__name">Design by Aleksey Konstantinov</p>
-                    <p class="autor__name">info@alekseykonstantinov.ru</p>
+                    <a class="autor__name address__link" href="mailto:info@alekseykonstantinov.ru">info@alekseykonstantinov.ru</a>                    
                 </div>
             </address>
         </div>  

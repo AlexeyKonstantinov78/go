@@ -21,6 +21,11 @@
 
 .fag__acc_title {
     width:100%;
+    color: black;
+}
+
+.fag__acc_title-fff {    
+    color: #fff;        
 }
 
 .fag__text_acc {

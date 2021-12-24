@@ -1,8 +1,12 @@
 .book {
-    background: var(--bg-color);var(--bg-btn);
-    margin-bottom: 100px;
-    padding: 80px 0;
+    background: var(--bg-color);var(--bg-btn);    
+    padding: 50px 0;
     
+}
+
+.book__container {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 fieldset {
@@ -182,11 +186,11 @@ fieldset {
 
 .book__input_data {
     width: 134px;
-    padding: 12px 0 12px 20px;
+    padding: 12px 0 12px 5px;
 }
 .book__input_time {
     width: 134px;
-    padding: 12px 0 12px 20px;
+    padding: 12px 0 12px 5px;
 }
 
 .book__btn {
@@ -225,11 +229,26 @@ fieldset {
 
 input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 0;
+    /* background-image: url("https://img.icons8.com/ios-filled/50/000000/sort-down.png"); */
 } 
 
-input[type=time]::-webkit-calendar-picker-indicator {
+input[type=date] {
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/sort-down.png");
+    background-repeat: no-repeat;
+    background-size: 21px;
+    background-position: right;
+}
+
+input[type=time]::-webkit-calendar-picker-indicator {    
     font-size: 0;
 } 
+
+input[type=time] {
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/sort-down.png");
+    background-repeat: no-repeat;
+    background-size: 21px;
+    background-position: right;
+}
 
 @media (max-width: 1200px) {
     .book {

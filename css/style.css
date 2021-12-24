@@ -6,12 +6,14 @@
 @import "./hero/hero.css";
 @import "./wehave/wehave.css";
 @import "./halls/halls.css";
+@import "./form/datepicker/jquery-ui.min.css";
 @import "./book/book.css";
 @import "./about/about.css";
 @import "./reviews/swiper-bundle.min.css";
 @import "./reviews/reviews.css";
 @import "./fag/fag.css";
 @import "./accordion/accordion.css";
+@import "./footer.css";
 @import "./contacts/contacts.css";
 @import "./social/social.css";
 @import "autor.css";

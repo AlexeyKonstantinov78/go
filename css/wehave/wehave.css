@@ -1,6 +1,6 @@
 .wehave {
     padding-bottom: 70px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .wehave__title {
@@ -130,11 +130,11 @@
         line-height: 36px;
     }
     .wehave__items {
-        gap: 20px 20px;    
+        gap: 20px 19px;    
     }    
 }
 
-@media (max-width: 810px){
+@media (max-width: 640px){
     .wehave__title {
         font-size: 14px;
         line-height: 18px;

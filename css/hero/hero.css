@@ -1,11 +1,9 @@
 .hero {
     position: relative;    
     max-width: 1210px;
-    height: 910px;    
-    margin-bottom: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
+    height: 910px;        
     display: flow-root;
+    padding-top: 6px;
 }
 
 .hero:after {
@@ -76,9 +74,7 @@
     stroke:var(--border-btn, #CD06FF);
 }
 
-.hero__title {
-    position: absolute;
-    top: 0;
+.hero__title {    
     font-family: "Arial Black", sans-serif;   
     font-weight: 900;
     font-size: 200px;
@@ -87,10 +83,10 @@
     text-align: left;
     display: flex;
     flex-direction: column;    
+    margin-bottom: 18px;    
 }
 
-.hero__discription {    
-    padding-top: 160px;
+.hero__discription {        
     font-style: normal;
     font-weight: normal;
     letter-spacing: 0;
@@ -114,6 +110,7 @@
     flex-direction: column;
     flex-basis: 180px;
     align-items: center;
+    justify-content: end;    
 }
 
 .hero__content-title {
@@ -124,11 +121,13 @@
     text-transform: uppercase;
 }
 
-.hero__content-title_new {
+.hero__content-halls_add {
+    gap: 15px;
+}
+
+.hero__content-title_new {    
     font-size: 60px;
-    line-height: 65px;
-    margin-top: auto;
-    margin-bottom: 15px;
+    line-height: 65px;    
 }
 
 
@@ -178,10 +177,10 @@
     .hero__title {
         font-size: 152px;
         line-height: 100%;
+        margin-bottom: 13px;
     }
 
-    .hero__discription {
-        padding-top: 149px;
+    .hero__discription {        
         font-size: 22px;
         line-height: 30px;
         padding-left: 150px;
@@ -207,6 +206,9 @@
         line-height: 27px;
     }
     
+    .hero__content-halls_add {
+        gap: 0;
+    }    
 
     .hero__btn {
         margin-left: 39px;
@@ -229,7 +231,8 @@
 
 @media (max-width: 1000px) {
     .hero__title {
-        font-size: 116px;        
+        font-size: 116px;  
+        margin-bottom: 14px;
     }
 }
 
@@ -249,8 +252,7 @@
         height: 567px;
     }    
 
-    .hero__discription {
-        padding-top: 118px;
+    .hero__discription {        
         font-size: 18px;
         line-height: 24px;
         padding-left: 101px;
@@ -263,7 +265,6 @@
     }
     .hero__content-halls {
         flex-basis: 88px;
-     
     }
     .hero__content-title {
         font-size: 48px;  
@@ -295,7 +296,8 @@
 
 @media (max-width: 750px) {
     .hero__title {
-        font-size: 47px;       
+        font-size: 47px;
+        margin-bottom: 3px;       
     }
 }
 
@@ -316,8 +318,7 @@
         height: 230px;
     }    
 
-    .hero__discription {
-        padding-top: 44px;
+    .hero__discription {        
         font-size: 10px;
         line-height: 14px;
         padding-left: 5px;

@@ -38,6 +38,12 @@
     margin-bottom: 0;
 }
 
+.address__link:hover {
+    color: var(--border-btn);
+    filter: drop-shadow(0 0 10px #fff);
+    
+}
+
 .address__phone {
     background-image: url("./../contacts/image/phone-call.svg");
     background-repeat: no-repeat;

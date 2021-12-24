@@ -80,7 +80,7 @@ p {
 
 .container {
     max-width: 1210px;
-    padding: 0 15px;
+    padding: 50px 15px;
     margin: 0 auto;
 }
 
@@ -89,23 +89,23 @@ section {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .container {
-        max-width: 1024px;
+        
         padding: 0 60px;       
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .container {
-        max-width: 768px;
+        
         padding: 0 40px;       
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 640px) {
     .container {
-        max-width: 320px;
+        
         padding: 0 20px;       
     }
 }
