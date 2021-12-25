@@ -1,7 +1,6 @@
 .book {
     background: var(--bg-color);var(--bg-btn);    
-    padding: 50px 0;
-    
+    padding: 50px 0;    
 }
 
 .book__container {
@@ -289,7 +288,7 @@ html .ui-button.ui-state-disabled:active {
 
 @media (max-width: 1200px) {
     .book {
-        margin-bottom: 70px;
+        
     }
     .book__title {
         font-size: 30px;
@@ -317,7 +316,7 @@ html .ui-button.ui-state-disabled:active {
 
 @media (max-width: 1000px) {
     .book {
-        margin-bottom: 60px;
+        
     }
     .book__halls {
         margin-bottom: 50px;     
@@ -366,7 +365,7 @@ html .ui-button.ui-state-disabled:active {
 
 @media (max-width: 670px) {
     .book {
-        margin-bottom: 30px;
+        
     }
     .book {
         padding-top: 30px;

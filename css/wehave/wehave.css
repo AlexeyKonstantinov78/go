@@ -75,7 +75,7 @@
 
 @media (max-width: 1210px) {
     .wehave {     
-        margin-bottom: 70px;
+        margin-bottom: 35px;
     }
     .wehave__title {
         font-size: 30px;
@@ -99,8 +99,10 @@
 
 @media (max-width: 1020px) {
     .wehave {     
-        padding-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 30px;
     }
+    
     .wehave__items {
         justify-content: space-around;
     }
@@ -122,9 +124,7 @@
 }
 
 @media (max-width: 890px) {
-    .wehave {     
-        margin-bottom: 60px;
-    }
+    
     .wehave__title {
         font-size: 24px;
         line-height: 36px;
@@ -141,7 +141,7 @@
         margin-bottom: 15px;
     }
     .wehave {     
-        margin-bottom: 30px;
+        padding-bottom: 15px;
     }
     .wehave__items {
         gap: 10px 10px; 

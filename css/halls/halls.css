@@ -1,8 +1,4 @@
 
-.halls {    
-    /* margin-bottom: 100px; */
-}
-
 .halls__title {
     font-weight: bold;
     font-size: 40px;
@@ -64,8 +60,8 @@
 }
 
 @media (max-width: 1200px) {
-    .halls {    
-        margin-bottom: 70px;
+    .halls {
+        padding-bottom: 70px;
     }
     .halls__title {
         font-size: 30px;
@@ -80,8 +76,8 @@
 }
 
 @media (max-width: 890px) {
-    .halls {    
-        margin-bottom: 62px;
+    .halls {
+        padding-bottom: 62px;
     }
     .halls__title {
         font-size: 24px;
@@ -95,8 +91,8 @@
 }
 
 @media (max-width: 480px) {
-    .halls {    
-        margin-bottom: 30px;
+    .halls {
+        padding-bottom: 30px;
     }
     .halls__title {
         font-size: 14px;

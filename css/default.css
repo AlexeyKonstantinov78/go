@@ -90,22 +90,19 @@ section {
 
 
 @media (max-width: 1200px) {
-    .container {
-        
-        padding: 0 60px;       
+    .container {        
+        padding: 35px 60px;       
     }
 }
 
 @media (max-width: 1000px) {
-    .container {
-        
-        padding: 0 40px;       
+    .container {        
+        padding: 30px 40px;       
     }
 }
 
 @media (max-width: 640px) {
-    .container {
-        
-        padding: 0 20px;       
+    .container {        
+        padding: 15px 20px;       
     }
 }

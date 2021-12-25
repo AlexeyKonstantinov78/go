@@ -161,7 +161,7 @@
 @media (max-width: 1200px) {
     .hero {
         height: auto;
-        margin-bottom: 54px;
+        padding-top: 15px;        
     }
 
     .hero:after {
@@ -239,7 +239,7 @@
 @media (max-width: 890px) {
     .hero {
         height: auto;
-        margin-bottom: 54px;
+        padding-top: 13px;
     }
 
     .hero:after {
@@ -303,7 +303,7 @@
 
 @media (max-width: 480px) {
     .hero {        
-        margin-bottom: 20px;
+        padding-top: 10px;
         height: 230px;
     }
 

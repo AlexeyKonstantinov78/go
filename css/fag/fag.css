@@ -1,5 +1,3 @@
-
-
 .fag__title {
     font-weight: bold;
     font-size: 40px;
@@ -60,9 +58,6 @@
 }
 
 @media (max-width: 1200px) {
-    .fag {
-        margin-bottom: 70px;        
-    }
     
     .fag__title {
         font-size: 30px;
@@ -72,9 +67,6 @@
 }
 
 @media (max-width: 890px) {
-    .fag {
-        margin-bottom: 60px;        
-    }
     
     .fag__title {
         font-size: 24px;
@@ -84,9 +76,6 @@
 }
 
 @media (max-width: 640px) {
-    .fag {
-        margin-bottom: 23px;        
-    }
     
     .fag__title {
         font-size: 14px;
