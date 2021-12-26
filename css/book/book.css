@@ -287,11 +287,13 @@ html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active { 
     text-align: center;   
     background: #fff;
+    
 }
 
-.ui-state-active {    
-        background: var(--bg-btn-color) !important;    
+.ui-datepicker-current-day .ui-state-active {    
+    background: var(--bg-btn-color);    
 }
+
 
 .ui-timepicker-standard .ui-state-hover {
     background-color: var(--bg-btn-color);
