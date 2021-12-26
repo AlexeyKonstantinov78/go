@@ -186,10 +186,18 @@ fieldset {
 .book__input_data {
     width: 134px;
     padding: 12px 0 12px 5px;
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/sort-down.png");
+    background-repeat: no-repeat;
+    background-size: 21px;
+    background-position: right;
 }
 .book__input_time {
     width: 134px;
     padding: 12px 0 12px 5px;
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/sort-down.png");
+    background-repeat: no-repeat;
+    background-size: 21px;
+    background-position: right;
 }
 
 .book__btn {
@@ -285,6 +293,11 @@ html .ui-button.ui-state-disabled:active {
         background: var(--bg-btn-color) !important;    
 }
 
+.ui-timepicker-standard .ui-state-hover {
+    background-color: var(--bg-btn-color);
+    border: 1px solid var(--bg-btn-color);
+    color: #fff;
+}
 
 @media (max-width: 1200px) {
     .book {

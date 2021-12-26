@@ -7,6 +7,7 @@
 @import "./wehave/wehave.css";
 @import "./halls/halls.css";
 @import "./form/datepicker/jquery-ui.min.css";
+@import "./form/time/time-picker/jquery.timepicker.css";
 @import "./book/book.css";
 @import "./about/about.css";
 @import "./reviews/swiper-bundle.min.css";
